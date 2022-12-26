@@ -8,10 +8,14 @@ import { Link } from "react-router-dom";
 const Header = () => {
   // header state
   const [isActive, setIsActive] = useState(false);
+
+  // cartContext 
   const { itemAmount } = useContext(CartContext);
+
+  // sidebar context 
   const { isOpen, setIsOpen } = useContext(SidebarContexts);
 
- 
+//  scroll handle 
   useEffect(()=>{
     window.addEventListener('scroll', ()=>{
       window.scrollY > 60 ? setIsActive(true) : setIsActive(false);
