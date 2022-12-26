@@ -16,8 +16,8 @@ const Product = ({ product }) => {
 
 
   return (
-    <div className="shadow-md rounded shadow-slate-400">
-      <div className=" border border-gray-200 h-[300px] relative overflow-hidden group transition">
+    <div className="shadow-lg rounded shadow-slate-200">
+      <div className=" border border-gray-100 h-[300px] relative overflow-hidden group transition border-b-0">
         <div className="w-full h-full flex justify-center items-center">
           {/* image  */}
           <div className="w-[200px] mx-auto flex justify-center items-center">
@@ -50,7 +50,7 @@ const Product = ({ product }) => {
       </div>
 
       {/* category title $ price  */}
-      <div className="bg-slate-100 rounded py-1 px-2">
+      <div className="rounded p-3 border border-gray-100 border-t-0">
         <div className="text-sm my-1 capitalize text-gray-500">{category}</div>
         <Link to={`/product/${id}`}>
           <h2 className="font-semibold leading-[18px] md:leading-5 text-sm sm:text-md ">

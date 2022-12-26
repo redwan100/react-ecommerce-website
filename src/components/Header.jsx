@@ -21,8 +21,8 @@ const Header = () => {
 
   return (
     <div
-      className={`w-full  shadow-md bg-white/60 py-3  backdrop-blur-sm z-50 transition-all duration-150 ${
-        isActive ? "fixed top-0 left-0 transition-all duration-1000" : ""
+      className={`w-full  shadow-md bg-white/60 py-3  backdrop-blur-sm z-50 transition-all duration-500 ${
+        isActive ? "fixed top-0 left-0 " : ""
       }`}
     >
       <div className=" flex justify-between container mx-auto">
@@ -35,7 +35,7 @@ const Header = () => {
           <AiOutlineShoppingCart className="text-3xl cursor-pointer" />
 
           <div className="absolute top-0 -right-2 bg-rose-500 text-white w-[18px] h-[18px] grid place-items-center rounded-full text-xs font-bold">
-            {itemAmount }
+            {itemAmount}
           </div>
         </div>
       </div>
