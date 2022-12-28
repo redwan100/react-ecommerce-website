@@ -4,6 +4,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { CartContext } from "../context/CartContext";
 import logo from "../assets/pictures/logo.svg";
 import { Link } from "react-router-dom";
+import Login from "./Login";
 
 const Header = () => {
   // header state
@@ -35,11 +36,18 @@ const Header = () => {
             <img src={logo} alt="" className="w-[30px]" />
           </div>
         </Link>
-        <div className="relative" onClick={() => setIsOpen(!isOpen)}>
-          <AiOutlineShoppingCart className="text-3xl cursor-pointer" />
 
-          <div className="absolute top-0 -right-2 bg-rose-500 text-white w-[18px] h-[18px] grid place-items-center rounded-full text-xs font-bold">
-            {itemAmount}
+        {/* cart section  */}
+        <div className="flex gap-5 justify-end items-center">
+          <div className="relative" onClick={() => setIsOpen(!isOpen)}>
+            <AiOutlineShoppingCart className="text-3xl cursor-pointer" />
+
+            <div className="absolute top-0 -right-2 bg-rose-500 text-white w-[18px] h-[18px] grid place-items-center rounded-full text-xs font-bold">
+              {itemAmount}
+            </div>
+          </div>
+          <div className="text-rose-500 border-2 border-rose-600 rounded-full grid place-items-center py-[3px] px-[6px] text-sm cursor-pointer font-semibold" onClick={()=>setIsShowLogin(true)}>
+            Login/Sign up
           </div>
         </div>
       </div>
